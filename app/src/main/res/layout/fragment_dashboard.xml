@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.ui.newViagem.NewViagemFragment">
+
+    <EditText
+        android:id="@+id/editTextDestino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:hint="destino"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/editTextTipo"
+        android:layout_width="209dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="tipo"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editTextDestino"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDestino" />
+
+    <EditText
+        android:id="@+id/editTextChegada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="data chegada"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="@+id/editTextTipo"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTipo" />
+
+    <EditText
+        android:id="@+id/editTextPartida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="data partida"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="@+id/editTextChegada"
+        app:layout_constraintTop_toBottomOf="@+id/editTextChegada" />
+
+    <EditText
+        android:id="@+id/editTextOrcamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="orçamento"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/editTextPartida"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPartida" />
+
+    <Button
+        android:id="@+id/buttonFragmentViagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Salvar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextOrcamento" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

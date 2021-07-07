@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.gasto.NewGastoActivity">
+
+    <EditText
+        android:id="@+id/editTextValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:hint="valor"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/editTextTipoGasto"
+        android:layout_width="209dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="tipo"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editTextValor"
+        app:layout_constraintTop_toBottomOf="@+id/editTextValor" />
+
+    <EditText
+        android:id="@+id/editTextDataGasto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="data"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="@+id/editTextTipoGasto"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTipoGasto" />
+
+    <EditText
+        android:id="@+id/editTextDescGasto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="descrição"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editTextDataGasto"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDataGasto" />
+
+    <EditText
+        android:id="@+id/editTextLocalGasto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="local"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editTextDescGasto"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDescGasto" />
+
+    <Button
+        android:id="@+id/buttonGastoActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Salvar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLocalGasto" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

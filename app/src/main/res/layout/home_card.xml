@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/imageViewCard"
+            android:layout_width="89dp"
+            android:layout_height="94dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/boaviagemlogo" />
+
+        <TextView
+            android:id="@+id/textViewDestino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Destino"
+            app:layout_constraintStart_toEndOf="@+id/imageViewCard"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewDestinoResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blumenau"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="@+id/textViewDestino" />
+
+        <TextView
+            android:id="@+id/textViewDataChegadaResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10/05/2021"
+            app:layout_constraintStart_toStartOf="@+id/textViewDestinoResult"
+            app:layout_constraintTop_toTopOf="@+id/textViewDataChegada" />
+
+        <TextView
+            android:id="@+id/textViewDataPartidaResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10/05/2021"
+            app:layout_constraintStart_toStartOf="@+id/textViewDataChegadaResult"
+            app:layout_constraintTop_toTopOf="@+id/textViewDataPartida" />
+
+        <TextView
+            android:id="@+id/textViewOrcamentoResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$100,00"
+            app:layout_constraintStart_toStartOf="@+id/textViewDataPartidaResult"
+            app:layout_constraintTop_toTopOf="@+id/textViewOrcamento" />
+
+        <TextView
+            android:id="@+id/textViewGastoTotalResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$190,00"
+            app:layout_constraintStart_toStartOf="@+id/textViewOrcamentoResult"
+            app:layout_constraintTop_toTopOf="@+id/textViewGastoTotal" />
+
+        <TextView
+            android:id="@+id/textViewDataChegada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="25dp"
+            android:text="Data Chegada"
+            app:layout_constraintStart_toEndOf="@+id/imageViewCard"
+            app:layout_constraintTop_toTopOf="@+id/textViewDestino" />
+
+        <TextView
+            android:id="@+id/textViewDataPartida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="25dp"
+            android:text="Data Partida"
+            app:layout_constraintStart_toEndOf="@+id/imageViewCard"
+            app:layout_constraintTop_toTopOf="@+id/textViewDataChegada" />
+
+        <TextView
+            android:id="@+id/textViewOrcamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="25dp"
+            android:text="Orçamento"
+            app:layout_constraintStart_toEndOf="@+id/imageViewCard"
+            app:layout_constraintTop_toTopOf="@+id/textViewDataPartida" />
+
+        <TextView
+            android:id="@+id/textViewGastoTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="117dp"
+            android:layout_marginTop="25dp"
+            android:text="Gasto Total"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewOrcamento" />
+
+        <TextView
+            android:id="@+id/textViewTipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="117dp"
+            android:layout_marginTop="25dp"
+            android:text="Tipo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewGastoTotal" />
+
+        <TextView
+            android:id="@+id/textViewTipoResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Negocio"
+            app:layout_constraintStart_toStartOf="@+id/textViewGastoTotalResult"
+            app:layout_constraintTop_toTopOf="@+id/textViewTipo" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="233dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
