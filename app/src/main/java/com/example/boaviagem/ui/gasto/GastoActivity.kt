@@ -23,6 +23,21 @@ class GastoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gasto)
 
+        val id = intent?.extras?.getLong("id")
+        val floatButton: FloatingActionButton = findViewById(R.id.floatingActionButton)
+
+        floatButton.setOnClickListener {
+            val intent = Intent(this, NewGastoActivity::class.java)
+            intent.putExtra("id", id)
+            startActivity(intent)
+        }
+
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+
         gastoController = GastoController(this)
         val id = intent?.extras?.getLong("id")
         recyclerView = findViewById(R.id.rv_gasto_viagem)
@@ -34,14 +49,6 @@ class GastoActivity : AppCompatActivity() {
             val gastos = gastoController.getGastos(id!!)
 
             adapter.setList(gastos!!)
-        }
-
-        val floatButton: FloatingActionButton = findViewById(R.id.floatingActionButton)
-
-        floatButton.setOnClickListener {
-            val intent = Intent(this, NewGastoActivity::class.java)
-            intent.putExtra("id", id)
-            startActivity(intent)
         }
     }
 }

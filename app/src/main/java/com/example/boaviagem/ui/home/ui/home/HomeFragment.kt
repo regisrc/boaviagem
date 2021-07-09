@@ -24,8 +24,15 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     ) {
         controller = ViagemController(requireContext())
         gastoController = GastoController(requireContext())
-        val id = activity?.intent?.extras?.getLong("id")
         recyclerView = view.findViewById(R.id.rv_home_viagem)
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        val id = activity?.intent?.extras?.getLong("id")
+
         val adapter = HomeAdapter(requireContext())
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = adapter
